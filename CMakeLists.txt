@@ -16,3 +16,8 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CM
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 
                                        CXX_STANDARD_REQUIRED ON
                                        CXX_EXTENSIONS OFF)
+
+if(WIN32)
+    #Compile with -MT
+    set_property(TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>") 
+endif()
