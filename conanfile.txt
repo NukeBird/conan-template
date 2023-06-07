@@ -1,10 +1,7 @@
 #Anything can be here. Look for more libraries via conan search -r=all library_name
 #Also you can check libs via https://conan.io/center
 [requires]
-magnum/2020.06
-magnum-extras/2020.06
-magnum-integration/2020.06
-magnum-plugins/2020.06
+glm/cci.20230113
 
 [options]
 #blah:some_foo=True
